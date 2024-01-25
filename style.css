@@ -1,0 +1,118 @@
+* {
+    box-sizing: border-box;
+  }
+  
+  body {
+    background-color:#fedcbd
+  }
+  
+  /* Style the header */
+  header {
+    background-color: rgb(51, 64, 96);
+    padding: 30px;
+    text-align: center;
+    font-size: 35px;
+    color: rgb(255, 255, 255);
+  }
+  
+  /* Create two columns/boxes that floats next to each other */
+  nav {
+    float: left;
+    width: 20%;
+    background: #42a8b8;
+    padding: 20px;
+  }
+  
+  /* Style the list inside the menu */
+  nav ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  article {
+    float: left;
+    padding: 20px;
+    width: 80%;
+    background-color: #fedcbd;
+  }
+  
+  /* Clear floats after the columns */
+  section::after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  table {
+    padding: 10px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  td {
+    padding: 10px;
+  }
+  tr {
+    background-color: rgb(241, 246, 163);
+  }
+  /* Style the footer */
+  footer {
+    background-color: rgb(51, 64, 96);
+    padding: 10px;
+    text-align: center;
+    color: white;
+  }
+  img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+
+  }
+
+  #abbeyroad {
+    background-color: #ecc5a2;
+    padding: 10px;
+  }
+
+  #animals {
+    background-color: #ecaaa2;
+    padding: 10px;
+  }
+
+  #coventgarden {
+    background-color: #ecaaa2;
+    padding: 10px;
+  }
+
+  .image-container {
+    width: 100px;
+    height: 100px;
+    background-image: url('willhoppe.png'); /* replace with your image path */
+    background-size: cover;
+    opacity: 0.2;
+    transition: opacity 0.5s ease;
+    text-align: center;
+    border-bottom: 6px double #3498db;
+  }
+  @keyframes example {
+    0%   {background-color:red; left:0px; top:0px;}
+    25%  {background-color:yellow; left:400px; top:0px;}
+    50%  {background-color:blue; left:400px; top:0px;}
+    75%  {background-color:green; left:0px; top:0px;}
+    100% {background-color:red; left:0px; top:0px;}
+  }
+
+  #animate {
+    width: 100px;
+    height: 100px;
+    position: relative;
+    background-color: red;
+    animation-name: example;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+  }
+  /* Responsive layout - makes the two columns/boxes stack on top of each other instead of next to each other, on small screens */
+  @media (max-width: 600px) {
+    nav, article {
+      width: 100%;
+      height: auto;
+    }
+  }
